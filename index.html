@@ -22,32 +22,49 @@
   <!-- Loading JS file -->
    <script defer src="./script.js"></script>
 
-
-
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="main">
+    <section class="sign-up-page">
+      <picture>
+        <!-- Desktop image -->
+        <source class="desktop-sign-up-image" srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 63em)" width="400px" height="593px" loading="lazy" decoding="async">
+        <!-- Tablet image -->
+        <source class="tablet-sign-up-image" srcset="./assets/images/illustration-sign-up-tablet.svg" media="(min-width: 44em)" width="528px" height="358.286px" loading="lazy" decoding="async">
+        <!-- Mobile image -->
+        <img class="mobile-sign-up-image" src="./assets/images/illustration-sign-up-mobile.svg" alt="" width="375px" height="284px" loading="lazy" decoding="async" aria-label="hidden">
+      </picture>
+      <article class="sign-up-page-body">
+        <div class="sign-up-page-info">
+          <h1 class="sign-up-page-header">Stay updated!</h1>
+          <p class="sign-up-page-paragraph">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="sign-up-page-list">
+            <li>
+              Product discovery and building what matters
+            </li>
+            <li>
+              Measuring to ensure updates are a success
+            </li>
+            <li>
+              And much more!
+            </li>
+          </ul>
+        </div>
+        <form action="" class="form">
+          <label for="email">Email address</label>
+          <input type="email" name="email" placeholder="email@company.com">
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </article>
+    </section>
+    <section class="success-page"></section>
+  </main>
 
   <!-- Sign-up form start -->
 
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
 
   <!-- Sign-up form end -->
 
@@ -62,9 +79,9 @@
 
   <!-- Success message end -->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="footer">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
+    Coded by <a href="#" target="_blank" rel="noopener noreferrer">Your Name Here</a>.
+  </footer>
 </body>
 </html>
