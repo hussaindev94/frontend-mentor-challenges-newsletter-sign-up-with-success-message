@@ -1,9 +1,16 @@
 /* Table layout design */
-@media (main-width: 44em) {
-
+@media (min-width: 44em) {
+  picture {
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+  .tablet-sign-up-image {
+    border: 0rem solid #19182b;
+    border-radius: 1.6rem;
+    background: linear-gradient(90deg, #ff6a3a 0%, #ff527b 100%);
+  }
 }
 
 /* Desktop layout design */
-@media (main-width: 63em) {
-
+@media (min-width: 63em) {
 }

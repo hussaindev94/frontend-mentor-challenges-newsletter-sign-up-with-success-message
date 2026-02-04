@@ -18,33 +18,33 @@
   --text-preset-1-line-height: 100%;
   --text-preset-1-letter-spacing: 0rem;
 
-  --text-preset-2:
+  --text-preset-1-mobile:
     "Roboto-bold", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --text-preset-2-font-size: 4rem;
-  --text-preset-2-line-height: 100%;
-  --text-preset-2-letter-spacing: 0rem;
+  --text-preset-1-mobile-font-size: 4rem;
+  --text-preset-1-mobile-line-height: 100%;
+  --text-preset-1-mobile-letter-spacing: 0rem;
+
+  --text-preset-2-bold:
+    "Roboto-bold", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --text-preset-2-bold-font-size: 1.6rem;
+  --text-preset-2-bold-line-height: 150%;
+  --text-preset-2-bold-letter-spacing: 0rem;
+
+  --text-preset-2-regular:
+    "Roboto-regular", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --text-preset-2-regular-font-size: 1.6rem;
+  --text-preset-2-regular-line-height: 150%;
+  --text-preset-2-regular-letter-spacing: 0rem;
 
   --text-preset-3:
     "Roboto-bold", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --text-preset-3-font-size: 1.6rem;
+  --text-preset-3-font-size: 1.2rem;
   --text-preset-3-line-height: 150%;
   --text-preset-3-letter-spacing: 0rem;
-
-  --text-preset-4:
-    "Roboto-regular", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --text-preset-4-font-size: 1.6rem;
-  --text-preset-4-line-height: 150%;
-  --text-preset-4-letter-spacing: 0rem;
-
-  --text-preset-5:
-    "Roboto-bold", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --text-preset-5-font-size: 1.2rem;
-  --text-preset-5-line-height: 150%;
-  --text-preset-5-letter-spacing: 0rem;
 
   /* Spacing variables*/
   --spacing-100: 0.8rem;
@@ -63,8 +63,244 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main {
+  position: relative;
 }
 
+/*Sign up styles*/
+.sign-up-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-500);
+}
+.mobile-sign-up-image {
+  border: 0 solid #19182b;
+  border-radius: 0 0 1.6rem 1.6rem;
+  background: var(--gradient-color);
+}
+.sign-up-page-body {
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-500);
+}
+.sign-up-page-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-300);
+}
+.sign-up-page-header {
+  color: var(--blue-color-800);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-1-mobile);
+  font-size: var(--text-preset-1-mobile-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-preset-1-mobile-line-height);
+}
+.sign-up-page-paragraph {
+  color: var(--blue-color-800);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-2-regular);
+  font-size: var(--text-preset-2-regular-font-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-preset-2-regular-line-height);
+}
+.sign-up-page-list {
+}
+.sign-up-page-list li {
+  color: var(--blue-color-800);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-2-regular);
+  font-size: var(--text-preset-2-regular-font-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-preset-2-regular-line-height);
+
+  padding-inline-start: 1.6rem;
+}
+.sign-up-page-list li::marker {
+  content: url("../assets/images/icon-list.svg");
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-100);
+}
+.email-input-labels {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.form-email-label {
+  color: var(--blue-color-800);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+
+  font-family: var(--text-preset-3);
+  font-size: var(--text-preset-3-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-preset-3-line-height);
+}
+/*selecte it with JS and when conditions are not met chage the opacity to 1*/
+.email-error-message {
+  opacity: 0;
+  color: var(--red-color);
+  text-align: right;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+
+  font-family: var(--text-preset-3);
+  font-size: var(--text-preset-3-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-preset-3-line-height);
+}
+.form-email-input {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+
+  width: 32.7rem;
+  height: 5.6rem;
+  padding: var(--spacing-200) var(--spacing-300);
+
+  border: 0.01rem solid var(--grey-color);
+  border-radius: 0.8rem;
+
+  color: var(--grey-color);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-2-regular);
+  font-size: var(--text-preset-2-regular-font-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-preset-2-regular-line-height);
+}
+.form-email-input:active {
+  border: 0.01rem solid var(--blue-color-800);
+}
+/*When there is an error toggle it with JS*/
+.wrong-email-input {
+  border: 0.01rem solid var(--red-color);
+  background: #ffe7e6;
+  color: var(--red-color);
+}
+.form-submit-button,
+.success-page-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-100);
+
+  width: 32.7rem;
+  height: 5.6rem;
+  padding: var(--spacing-200) var(--spacing-600);
+  text-wrap: nowrap;
+
+  background-color: var(--blue-color-800);
+  border-radius: 0.8rem;
+
+  color: var(--white-color);
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-2-bold);
+  font-size: var(--text-preset-2-bold-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-preset-2-bold-line-height);
+}
+
+/*Success message page styles*/
+.success-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 14.9rem 2.4rem 7rem 2.4rem;
+}
+.success-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 623px;
+}
+.success-page-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: var(--spacing-400);
+}
+.success-image {
+}
+.success-page-header {
+  align-self: stretch;
+  color: var(--blue-color-800);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-1-mobile);
+  font-size: var(--text-preset-1-mobile-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-preset-1-mobile-line-height);
+}
+.success-page-info {
+  align-self: stretch;
+}
+.success-message {
+  color: var(--blue-color-800);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: var(--text-preset-2-regular);
+  font-size: var(--text-preset-2-regular-font-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-preset-2-regular-line-height);
+}
+.user-email {
+  font-weight: 700;
+}
+.success-page-button {
+  padding: var(--spacing-200) var(--spacing-1300);
+}
+
+/*Common class for hide and show page*/
+.hidden {
+  display: none;
+}
+
+/*footer styles*/
 .footer {
   font-size: 11px;
   text-align: center;

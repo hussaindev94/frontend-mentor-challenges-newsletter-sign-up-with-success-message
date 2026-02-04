@@ -31,9 +31,9 @@
         <!-- Desktop image -->
         <source class="desktop-sign-up-image" srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 63em)" width="400px" height="593px" loading="lazy" decoding="async">
         <!-- Tablet image -->
-        <source class="tablet-sign-up-image" srcset="./assets/images/illustration-sign-up-tablet.svg" media="(min-width: 44em)" width="528px" height="358.286px" loading="lazy" decoding="async">
+        <source class="tablet-sign-up-image" srcset="./assets/images/illustration-sign-up-tablet.svg" media="(min-width: 44em)" width="529px" height="358.6px" loading="lazy" decoding="async">
         <!-- Mobile image -->
-        <img class="mobile-sign-up-image" src="./assets/images/illustration-sign-up-mobile.svg" alt="" width="375px" height="284px" loading="lazy" decoding="async" aria-label="hidden">
+        <img class="mobile-sign-up-image" src="./assets/images/illustration-sign-up-mobile.svg" alt="" loading="lazy" decoding="async" aria-label="hidden">
       </picture>
       <article class="sign-up-page-body">
         <div class="sign-up-page-info">
@@ -54,13 +54,37 @@
           </ul>
         </div>
         <form action="" class="form">
-          <label for="email">Email address</label>
-          <input type="email" name="email" placeholder="email@company.com">
-          <button type="submit">Subscribe to monthly newsletter</button>
+          <div class="email-input-labels">
+            <label for="email" class="form-email-label">Email address</label>
+            <span class="email-error-message">Valid email required</span>
+          </div>
+          <input type="email" name="email" placeholder="email@company.com" class="form-email-input">
+          <button type="submit" class="form-submit-button">Subscribe to monthly newsletter</button>
         </form>
       </article>
     </section>
-    <section class="success-page"></section>
+    <section class="success-page hidden">
+      <div class="success-page-wrapper">
+      <div class="success-page-contents">
+        <img src="./assets/images/icon-success.svg" alt="" class="success-image" aria-label="hidden" width="64" height="64">
+        <h1 class="success-page-header">
+          Thanks for subscribing!
+        </h1>
+        <article class="success-page-info">
+          <p class="success-message">
+            A confirmation email has been sent to
+            <span class="user-email">ash@loremcompany.com</span>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+        </article>
+      </div>
+      <button type="reset" class="success-page-button">
+        Dismiss message
+      </button>
+      </div>
+
+
+    </section>
   </main>
 
   <!-- Sign-up form start -->
@@ -70,12 +94,8 @@
 
   <!-- Success message start -->
 
-  Thanks for subscribing!
 
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
 
-  Dismiss message
 
   <!-- Success message end -->
 
