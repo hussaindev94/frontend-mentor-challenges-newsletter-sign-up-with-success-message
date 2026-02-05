@@ -66,9 +66,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .main {
-  position: relative;
 }
 
 /*Sign up styles*/
@@ -163,7 +163,6 @@ body {
 }
 /*selecte it with JS and when conditions are not met chage the opacity to 1*/
 .email-error-message {
-  opacity: 0;
   color: var(--red-color);
   text-align: right;
   font-feature-settings:
@@ -246,6 +245,7 @@ body {
 
   padding: 14.9rem 2.4rem 7rem 2.4rem;
 }
+
 .success-page-wrapper {
   display: flex;
   flex-direction: column;
@@ -302,6 +302,9 @@ body {
 
 /*footer styles*/
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: auto;
   font-size: 11px;
   text-align: center;
   & a {
