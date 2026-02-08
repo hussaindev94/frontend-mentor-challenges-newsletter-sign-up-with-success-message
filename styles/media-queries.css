@@ -1,5 +1,26 @@
 /* Table layout design */
 @media (min-width: 44em) {
+  body {
+    background-color: #36384d;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7.3rem 8rem;
+    width: 100vw;
+  }
+  .sign-up-page {
+    width: 60.8rem;
+    gap: 0.8rem;
+    flex-shrink: 0;
+
+    padding: 4rem;
+    border-radius: 3.6rem;
+    background: #fff;
+    box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.25);
+  }
   picture {
     border-radius: 1.6rem;
     overflow: hidden;
@@ -9,8 +30,72 @@
     border-radius: 1.6rem;
     background: linear-gradient(90deg, #ff6a3a 0%, #ff527b 100%);
   }
+  .sign-up-page-body {
+    align-self: stretch;
+    gap: 2.4rem;
+    width: 528px;
+  }
+  .form {
+    gap: 1.6rem;
+    width: 528px;
+  }
+  .form-email-input,
+  .form-submit-button {
+    width: 528px;
+  }
+  .success-page {
+    position: unset;
+    width: 50.4rem;
+    height: 52rem;
+    padding: 6.4rem;
+    gap: 0.8rem;
+    margin: 6.4rem;
+
+    border-radius: 3.6rem;
+    background: #fff;
+    box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.25);
+  }
+  .success-page-button {
+    width: 376px;
+  }
 }
 
 /* Desktop layout design */
 @media (min-width: 63em) {
+  .main {
+    justify-content: center;
+    align-items: center;
+    padding: 21.9rem 26.8rem 22rem 26.8rem;
+  }
+
+  .sign-up-page {
+    width: 840px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+
+    padding: 32px;
+    overflow: hidden;
+  }
+  .sign-up-page-body {
+    width: 376px;
+    align-items: center;
+    justify-content: center;
+  }
+  .form,
+  .form-email-input,
+  .form-submit-button {
+    width: 376px;
+  }
+  .form-submit-button {
+    transition: background 1s linear;
+  }
+  .form:focus-within .form-submit-button {
+    background: linear-gradient(90deg, #ff6a3a 0%, #ff527b 100%);
+    border: none;
+  }
+  .hidden {
+    display: none;
+  }
 }
