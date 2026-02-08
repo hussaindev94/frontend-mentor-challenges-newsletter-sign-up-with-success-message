@@ -56,9 +56,9 @@
         <form action="" class="form" novalidate>
           <div class="email-input-labels">
             <label for="email" class="form-email-label">Email address</label>
-            <span class="email-error-message hidden">Valid email required</span>
+            <span id="email-error" class="email-error-message hidden">Valid email required</span>
           </div>
-          <input type="email" name="email" placeholder="email@company.com" class="form-email-input">
+          <input id="email" type="email" name="email" placeholder="email@company.com" class="form-email-input" aria-describedby="email-error" aria-invalid="true">
           <button type="submit" class="form-submit-button">Subscribe to monthly newsletter</button>
         </form>
       </article>
