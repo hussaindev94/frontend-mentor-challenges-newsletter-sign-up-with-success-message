@@ -68,8 +68,6 @@ body {
   align-items: center;
   position: relative;
 }
-.main {
-}
 
 /*Sign up styles*/
 .sign-up-page {
@@ -118,8 +116,7 @@ body {
   font-weight: 400;
   line-height: var(--text-preset-2-regular-line-height);
 }
-.sign-up-page-list {
-}
+
 .sign-up-page-list li {
   color: var(--blue-color-800);
   font-feature-settings:
@@ -260,8 +257,7 @@ body {
   align-self: stretch;
   gap: var(--spacing-400);
 }
-.success-image {
-}
+
 .success-page-header {
   align-self: stretch;
   color: var(--blue-color-800);
